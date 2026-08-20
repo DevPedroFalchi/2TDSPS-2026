@@ -11,6 +11,6 @@ void main(){
   print("=======================================");
 
   //indicia o andamenttttto atual do rotteiro
-  prpiintn("Andamento do roteiro: 2/5");
+  print("Andamento do roteiro: 2/5");
 
 }
