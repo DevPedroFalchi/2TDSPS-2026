@@ -19,7 +19,7 @@ double calcularDesconto(double subtotal, double percentualDesconto){
 }
 
 double calcularTotalFinal(double precoUnit, int quantidade){
-  return precoUnit * quantidadeProdutos;
+  return precoUnit * quantidade;
 }
 
 
@@ -48,15 +48,15 @@ void main(){
   double percentualDesconto = 20;
 
   double subTotal = calcularSubtotal(precoUnitario, quantidade);
-  double temDesconto = calcularDesconto(subtotal, percentualDesconto);
-  double precoFinal = calcularTotalFinal(subtotal, desconto);
+  double temDesconto = calcularDesconto(subTotal, percentualDesconto);
+  double precoFinal = calcularTotalFinal(subTotal, temDesconto);
 
   exibirPedido(
     produto: produto,
     precoUnitario: precoUnitario,
     quantidade: quantidade,
-    subtotal: subtotal,
-    desconto: desconto,
-    totalFinal: totalFinal,
+    subtotal: subTotal,
+    desconto: temDesconto,
+    totalFinal: precoFinal,
   );
 }

@@ -3,7 +3,7 @@
 
 int somar(int primeiroNumero, int segundoNumero){
   //A expressao apos 'return' é calculada e enviada de volta ao chamador
-  return primeiroNumero + segundoNumero
+  return primeiroNumero + segundoNumero;
 }
 
 void main(){
