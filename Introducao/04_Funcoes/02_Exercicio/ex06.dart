@@ -9,19 +9,21 @@ Mochila
 36,00
 */
 
-
-double calcularSubtotal(String produto, double precoUnit, int quantidadeProdutos){
+double calcularSubtotal(
+  String produto,
+  double precoUnit,
+  int quantidadeProdutos,
+) {
   return precoUnit * quantidadeProdutos;
 }
 
-double calcularDesconto(double subtotal, double percentualDesconto){
+double calcularDesconto(double subtotal, double percentualDesconto) {
   return subtotal * (percentualDesconto / 100);
 }
 
-double calcularTotalFinal(double precoUnit, int quantidade){
-  return precoUnit * quantidade;
+double calcularTotalFinal(double subtotal, double desconto) {
+  return subtotal - desconto;
 }
-
 
 void exibirPedido({
   required String produto,
@@ -39,15 +41,13 @@ void exibirPedido({
   print('Total final: R\$ $totalFinal');
 }
 
-
-void main(){
-  
+void main() {
   String produto = 'Mochila';
   double precoUnitario = 240.00;
   int quantidade = 1;
   double percentualDesconto = 20;
 
-  double subTotal = calcularSubtotal(precoUnitario, quantidade);
+  double subTotal = calcularSubtotal(produto, precoUnitario, quantidade);
   double temDesconto = calcularDesconto(subTotal, percentualDesconto);
   double precoFinal = calcularTotalFinal(subTotal, temDesconto);
 
