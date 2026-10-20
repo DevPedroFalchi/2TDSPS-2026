@@ -1,8 +1,7 @@
 //criando uma classe simples em dart no caso classe pessoa
 // classe pessoa com dois atributos e um metodo
 
-class Pessoa{
-
+class Pessoa {
   String nome;
   int idade;
   int fisica;
@@ -10,18 +9,16 @@ class Pessoa{
 
   //construtor: inicializa os atributos quando um objeto é criado
   //this.nome e this.idade
-  Pessoa(this.nome, this.idade);
+  Pessoa(this.nome, this.idade, [this.fisica = 0, this.juridica = 0]);
 
   //método: defineum comportamento da classe ou acao que o objeto vai realizar
-  void apresentar(){
-
+  void apresentar() {
     //acessar os atrinutos da instancia atual usando seus nomes diretamente
     print('$nome tem $idade anos');
   }
 }
 
-void main(){
-
+void main() {
   //cria um objeto (instancia) da classe Pessoa com os valores fornecidos
   Pessoa pessoa = Pessoa('Pedro', 28);
 
